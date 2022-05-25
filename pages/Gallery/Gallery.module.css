@@ -1,0 +1,199 @@
+.toTop {
+    position: fixed;
+    bottom: 65px;
+    right: 65px;
+}
+
+.galleryBanner {
+    margin: 125px 150px 126px 150px;
+}
+
+.bannerTitleDesc {
+    display: flex;
+    margin-bottom: 75px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bannerTitle {
+    width: 60%;
+}
+
+.bannerTitle1 {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    /* identical to box height, or 20px */
+
+
+    color: #FF64AE;
+}
+
+.bannerTitle2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 125%;
+    /* or 45px */
+
+
+    color: #091156;
+}
+
+.bannerDesc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+
+    color: #8B8B8B;
+    width: 36%;
+}
+
+.bannerImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bannerImage {
+    width: 31%;
+    margin-bottom: 38px;
+}
+
+.bannerFooter {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+
+    color: #8B8B8B;
+    width: 60%;
+    margin-top: 28px;
+}
+
+.colorBlue {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+
+    color: #091156;
+}
+
+/* watch tour */
+
+.watchVideoTour {
+    background-image: url('../../assets/images/gal-watch-backgr.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding: 170px 422px 145px 423px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title1 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 125%;
+    /* or 45px */
+
+    text-align: center;
+    margin-bottom: 13px;
+    color: #FFFFFF;
+}
+
+.title2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-bottom: 41px;
+    color: #CACACA;
+}
+
+/* get quota */
+
+.getQuota {
+    background-image: url('../../assets/images/gal-bubble-backgr.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top 0 right 0;
+
+    padding: 120px 206px 115px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleAndDescWrapper {
+    width: 65%;
+}
+
+.getQuotaBtn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+
+    padding: 16px 39px 15px 41px;
+    background: #FF64AE;
+    box-shadow: 0px 17px 22px #FFEDF6;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+@media (max-width: 929px) {
+    .galleryBanner {
+        margin: 125px 20px 126px 20px;
+    }
+
+    .bannerTitleDesc {
+        flex-direction: column;
+    }
+
+    .bannerDesc,
+    .bannerTitle {
+        width: 100%;
+    }
+
+    /* .bannerImage {
+        width: 45%;
+        margin-bottom: 38px;
+    } */
+
+    .bannerFooter {
+        width: 100%;
+    }
+
+    .watchVideoTour {
+        padding: 170px 20px 170px 20px;
+    }
+    .getQuota {
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 120px 20px 115px 20px;
+    }
+    .titleAndDescWrapper {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 930px) and (max-width:1420px) {
+    .galleryBanner {
+        margin: 125px 30px 126px 30px;
+    }
+
+    .watchVideoTour {
+        padding: 170px 30px 170px 30px;
+    }
+    .getQuota {
+        padding: 120px 30px 115px 30px;
+    }
+}

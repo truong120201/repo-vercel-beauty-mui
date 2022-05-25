@@ -1,0 +1,481 @@
+.home2 {
+    width: 100%;
+    background-image: url('../../assets/images/home2-backgr.svg'), url('../../assets/images/wave.svg'), url('../../assets/images/wave2.svg'), url('../../assets/images/start-backgr.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: auto, auto, auto, auto;
+    background-position: top left, top 1900px left 0, top 2893px right 0, top 3800px left;
+    /* position: absolute; */
+}
+
+.slider {
+    margin-top: 204px;
+    margin-left: 150px;
+    margin-right: 295px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 314px;
+}
+
+.sliderRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+}
+
+
+.moreDetailBtn {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+
+    padding: 14px 31px 14px 29px;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+}
+
+.sliderTitle {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    width: 80%;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+}
+
+.sliderDesc {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    width: 75%;
+    color: #D8DCFF;
+    margin-bottom: 34px
+}
+
+.playButtonText {
+    /* margin-left: 46px; */
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    /* width: 150%; */
+}
+
+/* about us */
+
+.aboutUs {
+    margin: 0 150px;
+    margin-top: 158px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutUsEle {
+    width: 40%;
+}
+
+.aboutUsImg {
+    width: 100%;
+}
+
+.aboutUsLearnMoreBtn {
+    display: block;
+    width: fit-content;
+    margin-top: 35px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    background: #FF64AE;
+    box-shadow: 0px 17px 22px #FFEDF6;
+    border-radius: 50px;
+    padding: 16px 40px 15px 41px;
+}
+
+
+/* services */
+
+.services {
+    margin: 0 263px;
+    margin-top: 158px;
+}
+
+.listServices {
+    margin-top: 68px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.service {
+    padding: 31px 36px 47px 36px;
+    width: 30%;
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    border-radius: 25px;
+}
+
+.service:hover {
+    background: #FFFFFF;
+    border: 1px solid #9BA2E0;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.serviceHeading {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 125%;
+    /* or 22px */
+    margin-bottom: 16px;
+    margin-top: 25px;
+    color: #091156;
+}
+
+.serviceDesc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+
+    color: #8B8B8B;
+    margin-bottom: 17px;
+}
+
+.serviceLearnMore {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 125%;
+    /* or 17px */
+    color: #FF64AE;
+    display: flex;
+}
+
+.learnMoreText {
+    margin-right: 12px;
+}
+
+/* chosing */
+
+.choosing {
+
+    margin-top: 158px;
+
+    background-image: url('../../assets/images/chosing-us-backgr.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    padding: 272px 154px 178px 154px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.choosingTitle {
+    width: 42%;
+}
+
+.choosingData {
+    width: 42%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.choosingDataChild {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 43px;
+}
+
+.choosingDataRigth {
+    margin-left: 12px;
+}
+
+.choosingHeading {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 125%;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.choosinDesc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+
+    color: #D8DCFF;
+}
+
+.choosingCount {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 125%;
+    color: #FFFFFF;
+}
+
+.choosingCountDesc {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    /* or 20px */
+
+
+    color: #D8DCFF;
+}
+
+/* the blog */
+
+.theBlog {
+    margin-top: 100px;
+}
+
+.listBlog {
+    margin: 0 150px;
+    margin-top: 79px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog {
+    width: 31%;
+    background: #FFFFFF;
+    box-shadow: 0px 25px 50px 5px #F6F7FF;
+    border-radius: 25px;
+}
+
+.blogImg {
+    width: 100%;
+}
+
+.blogDescContainer {
+    padding: 56px 21px 72px 38px;
+}
+
+/* call */
+
+.callDescHeading {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 125%;
+    /* or 45px */
+
+
+    color: #091156;
+    margin-bottom: 12px;
+}
+
+.callDescText {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+
+    color: #8B8B8B;
+}
+
+.call {
+    padding: 169px 150px 151px 150px;
+    display: flex;
+}
+
+.callDesc {
+    width: 40%;
+}
+
+.callRight {
+    width: 60%;
+    background: #FFFFFF;
+}
+
+.callInput {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.callInputPlace {
+    flex: 1;
+    border: 1px solid #D9DDFE;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding-left: 37px;
+    outline: none;
+}
+
+
+.phoneIcon {
+    padding: 18px 34px;
+    background: #FF64AE;
+    border-radius: 0px 25px 25px 0px;
+}
+
+.callFootText {
+    text-align: right;
+    margin-top: 8px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: 0.1em;
+
+    color: #8B8B8B;
+}
+
+.toTop {
+    position: fixed;
+    bottom: 65px;
+    right: 65px;
+}
+
+@media (max-width: 929px) {
+    .slider {
+        margin: 0 10px;
+        margin-top: 140px;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 100px;
+    }
+
+    .sliderRight {
+        margin-top: 80px;
+        justify-content: flex-start;
+    }
+
+    .aboutUs {
+        margin: 0 10px;
+        margin-top: 120px;
+        flex-direction: column;
+    }
+
+    .aboutUsEle {
+        width: 100%;
+    }
+
+    .aboutUsEle:last-child {
+        margin-top: 30px;
+    }
+
+    .sliderTitle {
+        width: 100%;
+    }
+
+    .sliderDesc {
+        width: 100%;
+    }
+
+    .aboutUsLearnMoreBtn {
+        margin-left: 20px;
+    }
+
+
+    .services {
+        margin: 0 10px;
+        margin-top: 120px;
+    }
+
+    .listServices {
+        flex-wrap: wrap;
+    }
+
+    .service {
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .choosing {
+        padding: 100px 30px;
+        flex-direction: column;
+    }
+
+    .choosingTitle,
+    .choosingData {
+        width: 100%;
+    }
+
+    .choosingTitle {
+        margin-bottom: 30px;
+    }
+
+    .listBlog {
+        margin: 0 20px;
+        margin-top: 100px;
+        flex-direction: column;
+    }
+
+    .blog {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .call {
+        flex-direction: column;
+        padding: 100px 20px 100px 20px;
+    }
+    .callRight,
+    .callDesc {
+        width: 100%;
+    }
+
+    .callDesc {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 930px) and (max-width:1420px) {
+    .slider {
+        margin: 0 30px;
+        margin-top: 140px;
+        /* flex-direction: column;
+        justify-content: flex-end; */
+    }
+
+    .aboutUs {
+        margin: 0 30px;
+        margin-top: 140px;
+    }
+
+    .services {
+        margin: 0 30px;
+        margin-top: 140px;
+    }
+
+    .choosing {
+        padding: 272px 30px 178px 30px;
+    }
+
+    .choosingTitle,
+    .choosingData {
+        width: 50%;
+    }
+
+    .listBlog {
+        margin: 0 30px;
+        margin-top: 100px;
+    }
+
+    .call {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

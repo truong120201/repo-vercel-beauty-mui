@@ -1,0 +1,150 @@
+.footer {
+    background-image: url('../../assets/images/Footer-backgr.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: bottom 0;
+    margin-top: 70px;
+    padding: 225px 150px 40px 150px;
+}
+
+.footerBotSocials{
+    display: flex;
+}
+
+
+.footerTop {
+    display: flex;
+}
+
+.footerTop50 {
+    width: 55%;
+}
+
+.footerTopElement {
+    width: 22.5%;
+}
+
+.footerDesc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    margin-top: 23px;
+    margin-left: 23px;
+    color: #D7DBFF;
+}
+
+.beautyText {
+    font-weight: 700;
+}
+
+.footerDesc2 {
+    margin-top: 26px;
+    margin-left: 23px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    color: #D7DBFF;
+    margin-bottom: 4px;
+}
+
+.footerDesc3 {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    margin-left: 23px;
+    color: #D7DBFF;
+}
+
+.phoneNumber {
+    margin-right: 28px;
+}
+
+.footerTopHeading {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+}
+
+.cateElement {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: 0.1em;
+    margin-bottom: 11px;
+    color: #D7DBFF;
+}
+
+.footerBot {
+    margin-top: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialMediaIcon {
+    margin-right: 45px;
+}
+
+.footerCopyright {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: 0.1em;
+    color: #D7DBFF;
+}
+
+@media (max-width: 929px) {
+    .footer {
+        padding: 100px 20px 20px 20px;
+    }
+
+    .footerTop {
+        flex-wrap: wrap;
+
+    }
+
+    .footerTop50 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footerTopElement {
+        width: 50%;
+        text-align: center;
+    }
+
+    .footerBot {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .socialMediaIcon {
+        margin-right: 12px;
+    }
+
+    .footerCopyright {
+        text-align: center;
+    }
+}
+
+@media (min-width: 930px) and (max-width:1420px) {
+    .socialMediaIcon {
+        margin-right: 20px;
+    }
+
+    .footer {
+        padding: 100px 30px 30px 30px;
+    }
+}

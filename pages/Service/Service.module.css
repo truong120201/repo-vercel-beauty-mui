@@ -1,0 +1,289 @@
+.service {
+    background-image: url('../../assets/images/service-bubble-backgr.svg');
+    background-repeat: no-repeat;
+    background-position: top 222px right 0;
+}
+
+.servicesWrapper {
+    margin: 125px 170px 73px 170px;
+}
+
+.serviceBanners {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.serviceBannerImage {
+    width: 100%;
+    margin-bottom: 68px;
+}
+
+.serviceBanner1,
+.serviceBanner4 {
+    width: 26%;
+}
+
+.serviceBanner2,
+.serviceBanner3 {
+    width: 65%;
+}
+
+/* service Des */
+
+.serviceDes {
+    display: flex;
+    margin: 0 153px 92px 150px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.serviceDesImg {
+    width: 40%;
+}
+
+.serviceTitleAndDesc {
+    width: 42%;
+}
+
+.serviceDesFooter {
+    display: flex;
+    align-items: center;
+}
+
+.dbArrr {
+    margin-left: 13px;
+}
+
+.serviceDesFooterText {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: 0.1em;
+    margin-top: 9px;
+    color: #091156;
+}
+
+/* responsibility */
+
+.responsibility {
+    background-image: url('../../assets/images/service-response-backgr.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding: 182px 211px 182px 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playTreatmentsVideos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.responsibilitySlogan {
+    width: 55%;
+}
+
+.sloganHeading {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 125%;
+    /* or 45px */
+
+    margin-bottom: 12px;
+    color: #FFFFFF;
+
+}
+
+.sloganDesc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+
+    color: #CACACA;
+}
+
+.treatmentsText {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
+
+/* FAQ */
+
+.serviceFAQ {
+    margin: 116px 234px;
+}
+
+.faqQuestion {
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: 0.1em;
+
+    color: #091156;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.fqaAnswer {
+    background: #F7F7FF;
+    border-radius: 0px 0px 20px 20px;
+    padding: 52px 63px 53px 76px;
+    border-top: 1px solid #091156;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    margin-bottom: 28px;
+    color: #8B8B8B;
+}
+
+.arr {
+    float: right;
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 0;
+}
+
+.faqHeading {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 125%;
+    /* identical to box height, or 45px */
+
+    text-align: center;
+
+    color: #091156;
+}
+
+.headingUnderline {
+    background-color: #FF64AE;
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    margin-bottom: 68px;
+}
+
+.toTop {
+    position: fixed;
+    bottom: 65px;
+    right: 65px;
+}
+
+@media (max-width: 929px) {
+    .servicesWrapper {
+        margin: 125px 20px 141px 20px;
+    }
+
+    .serviceBanner1 {
+        order: 3;
+        width: 45%;
+    }
+
+    .serviceBanner2 {
+        order: 1;
+        width: 100%;
+    }
+
+    .serviceBanner3 {
+        order: 2;
+        width: 100%;
+    }
+
+    .serviceBanner4 {
+        order: 4;
+        width: 45%;
+    }
+
+    .serviceBannerImage {
+        margin-bottom: 18px;
+    }
+
+    .serviceBanners {
+        margin-top: 60px;
+    }
+
+    .serviceDesImg {
+        width: 100%;
+    }
+
+    .serviceDes {
+        margin: 0 20px 92px 20px;
+        flex-direction: column;
+    }
+
+    .serviceTitleAndDesc {
+        width: 100%;
+    }
+
+    .serviceDesFooterText {
+        padding-left: 20px;
+    }
+
+    .responsibility {
+        padding: 20px 20px 20px 20px;
+        flex-direction: column;
+        background-position: top 0 left -500px;
+    }
+
+    .playTreatmentsVideos {
+        width: 100%;
+    }
+
+    .responsibilitySlogan {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .serviceFAQ {
+        margin: 116px 20px;
+    }
+    .fqaAnswer {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 930px) and (max-width:1420px) {
+    .servicesWrapper {
+        margin: 125px 30px 141px 30px;
+    }
+
+    .serviceDes {
+        margin: 0 30px 92px 30px;
+    }
+
+    .responsibility {
+        padding: 182px 30px 182px 30px;
+    }
+    .serviceFAQ {
+        margin: 116px 30px;
+    }
+    .fqaAnswer {
+        padding: 20px;
+    }
+}
