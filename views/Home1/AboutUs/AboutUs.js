@@ -1,4 +1,3 @@
-import style from '../../../pages/Home1/Home1.module.css'
 import { TitleAndDesc } from '../../../components'
 import Image from 'next/image'
 
@@ -7,35 +6,42 @@ import aboutUsPlayBtn from '../../../assets/images/about-us-play-button.svg'
 
 // MUI
 import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography'
+
+import useStyles from './styles'
 
 function AboutUs() {
+
+    const classes = useStyles()
+
     return (
         <>
-            <div className={style.aboutUs}>
-                <div className={style.aboutUsDes}>
+            <Grid container justifyContent='center' alignItems='center' className={classes.aboutUs}>
+                <Grid className={classes.aboutUsDes}>
                     <TitleAndDesc
                         left={true}
                         title1={'About Us'}
                         title2={'We are the best beauty clinic'}
                         desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet. Egestas volutpat facilisi eu libero. Nunc, ipsum ornare mauris sit quam quis enim. Varius tellus in suspendisse placerat. Id dui erat sed quam tellus in purus. Pellentesque congue fringilla cras tellus enim.'}
                     />
-                    <div className={style.aboutUsBtns}>
-                        <a href='' className={`${style.bannerButton} ${style.mgt0}`}>Learn More</a>
-                        <div className={style.aboutUsPlayBtn}>
+                    <Grid container direction='row' className={classes.aboutUsBtns}>
+                        <a href='' className={`${classes.bannerButton}`}>Learn More</a>
+                        <Grid item container direction='row' alignItems='center' className={classes.aboutUsPlayBtn}>
                             <Image
                                 src={aboutUsPlayBtn}
                             />
-                            <p className={style.aboutUsPlayText}>Watch Video</p>
-                        </div>
-                    </div>
-                </div>
-                <Grid>
+                            <Typography component='p' className={classes.aboutUsPlayText}>Watch Video</Typography>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid className={classes.aboutUsImg}>
                     <Image
                         src={aboutUsImg}
                         layout='responsive'
                     />
                 </Grid>
-            </div>
+            </Grid>
         </>
     )
 }

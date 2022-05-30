@@ -1,35 +1,35 @@
-import style from '../../../pages/Home1/Home1.module.css'
 import sliderImg from '../../../assets/images/Home1-banner.svg'
 import Image from 'next/image'
 
-import useStyles from './styles'
-
 // MUI
 import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
+import { Typography } from '@material-ui/core'
+import useStyles from './styles'
 
 function Slider() {
     const classes = useStyles()
     return (
         <>
-            <Grid container alignItems='center' justifyContent='center'>
-                <Grid item lg={5} md={5} sm={12} className={style.sliderTitle}>
-                    <p className={style.bannerHeaderTitle}>Clinic & beauty consultant</p>
-                    <p className={style.bannerDesc}>It is a long established fact that a reader will be<br />
-                        by the readable content of a page.</p>
-                    <a href='' className={style.bannerButton}>More Details</a>
+            <Grid container alignItems='center' justifyContent='center' className={classes.slider}>
+                <Grid item className={classes.sliderTitle}>
+                    <Typography component='p' className={classes.bannerHeaderTitle}>Clinic &amp; beauty consultant</Typography>
+                    <Typography component='p' className={classes.bannerDesc}>It is a long established fact that a reader will be<br />
+                        by the readable content of a page.</Typography>
+                    <a href='' className={classes.bannerButton}>More Details</a>
                 </Grid>
-                <Grid item lg={5} md={5} sm={12} className={style.sliderImg}>
+                <Grid item className={classes.sliderImg}>
                     <Image
                         src={sliderImg}
-                        className={style.sliderImage}
+                        layout='responsive'
                     />
                 </Grid>
             </Grid>
-            <div className={style.slideButtons}>
-                <div className={style.slideButton}></div>
-                <div className={`${style.slideButton} ${style.slideButtonMid}`}></div>
-                <div className={style.slideButton}></div>
-            </div>
+            <Grid container className={classes.slideButtons}>
+                <Box className={classes.slideButton}></Box>
+                <Box className={`${classes.slideButton} ${classes.slideButtonMid}`}></Box>
+                <Box className={classes.slideButton}></Box>
+            </Grid>
         </>
     )
 }

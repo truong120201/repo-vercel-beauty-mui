@@ -1,4 +1,4 @@
-import style from './ProfessionalExpert.module.css'
+
 import { TitleAndDesc } from '../index.js'
 import Image from 'next/image'
 
@@ -9,99 +9,106 @@ import facebook from '../../assets/images/Facebook.svg'
 import instagram from '../../assets/images/Instagram.svg'
 import twitter from '../../assets/images/Twitter.svg'
 
-function ProfessionalExpert () {
-    return (
-        <div className={style.professionalTeams}>
-                <div className={style.teamsDes}>
-                    <TitleAndDesc
-                        left={false}
-                        title1={'Professional Teams'}
-                        title2={'The Professional expert'}
-                        desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.'}
-                    />
-                </div>
-                <div className={style.teams}>
-                    <div className={style.team}>
-                        <Image
-                            src={team1}
-                            className={style.teamImage}
-                        />
-                        <p className={style.teamTitle}>Surgeon</p>
-                        <p className={style.teamName}>Briyan Nevalli</p>
-                        <p className={style.teamDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
-                        <div className={style.teamSocialMedia}>
-                            <a href='#'>
-                                <Image
-                                    src={facebook}
-                                />
-                            </a>
-                            <a href='#'>
-                                <Image
-                                    src={instagram}
-                                />
-                            </a>
-                            <a href='#'>
-                                <Image
-                                    src={twitter}
-                                />
-                            </a>
-                        </div>
-                    </div>
-                    <div className={style.team}>
-                        <Image
-                            src={team2}
-                            className={style.teamImage}
-                        />
-                        <p className={style.teamTitle}>Dermatologist</p>
-                        <p className={style.teamName}>Bella sebastian</p>
-                        <p className={style.teamDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
-                        <div className={style.teamSocialMedia}>
-                            <a href='#'>
-                                <Image
-                                    src={facebook}
-                                />
-                            </a>
-                            <a href='#'>
-                                <Image
-                                    src={instagram}
-                                />
-                            </a>
-                            <a href='#'>
-                                <Image
-                                    src={twitter}
-                                />
-                            </a>
-                        </div>
-                    </div>
-                    <div className={style.team}>
-                        <Image
-                            src={team3}
-                            className={style.teamImage}
-                        />
-                        <p className={style.teamTitle}>Stylist expert</p>
-                        <p className={style.teamName}>Lilly Adams</p>
-                        <p className={style.teamDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
-                        <div className={style.teamSocialMedia}>
-                            <a href='#'>
-                                <Image
-                                    src={facebook}
-                                />
-                            </a>
-                            <a href='#'>
-                                <Image
-                                    src={instagram}
-                                />
-                            </a>
-                            <a href='#'>
-                                <Image
-                                    src={twitter}
-                                />
-                            </a>
-                        </div>
-                    </div>
+// MUI
 
-                </div>
-            </div>
+import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography'
+import useStyles from './styles'
+
+function ProfessionalExpert() {
+
+    const classes = useStyles()
+
+    return (
+        <Box className={classes.professionalTeams}>
+            <Box>
+                <TitleAndDesc
+                    left={false}
+                    title1={'Professional Teams'}
+                    title2={'The Professional expert'}
+                    desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.'}
+                />
+            </Box>
+            <Grid container justifyContent='space-around' className={classes.teams}>
+                <Grid container direction='column' justifyContent='center' alignItems='center' className={classes.team}>
+                    <Image
+                        src={team1}
+                    />
+                    <Typography align='center' className={classes.teamTitle}>Surgeon</Typography>
+                    <Typography align='center' className={classes.teamName}>Briyan Nevalli</Typography>
+                    <Typography align='center' className={classes.teamDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</Typography>
+                    <Grid container justifyContent='center' alignItems='center' className={classes.socialMediaIcons}>
+                        <a href='#'>
+                            <Image
+                                src={facebook}
+                            />
+                        </a>
+                        <a href='#'>
+                            <Image
+                                src={instagram}
+                            />
+                        </a>
+                        <a href='#'>
+                            <Image
+                                src={twitter}
+                            />
+                        </a>
+                    </Grid>
+                </Grid>
+                <Grid container direction='column' justifyContent='center' alignItems='center' className={classes.team}>
+                    <Image
+                        src={team2}
+                    />
+                    <Typography align='center' className={classes.teamTitle}>Dermatologist</Typography>
+                    <Typography align='center' className={classes.teamName}>Bella sebastian</Typography>
+                    <Typography align='center' className={classes.teamDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</Typography>
+                    <Grid container justifyContent='center' alignItems='center' className={classes.socialMediaIcons}>
+                        <a href='#'>
+                            <Image
+                                src={facebook}
+                            />
+                        </a>
+                        <a href='#'>
+                            <Image
+                                src={instagram}
+                            />
+                        </a>
+                        <a href='#'>
+                            <Image
+                                src={twitter}
+                            />
+                        </a>
+                    </Grid>
+                </Grid>
+                <Grid container direction='column' justifyContent='center' alignItems='center' className={classes.team}>
+                    <Image
+                        src={team3}
+                    />
+                    <Typography align='center' className={classes.teamTitle}>Stylist expert</Typography>
+                    <Typography align='center' className={classes.teamName}>Lilly Adams</Typography>
+                    <Typography align='center' className={classes.teamDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</Typography>
+                    <Grid container justifyContent='center' alignItems='center' className={classes.socialMediaIcons}>
+                        <a href='#'>
+                            <Image
+                                src={facebook}
+                            />
+                        </a>
+                        <a href='#'>
+                            <Image
+                                src={instagram}
+                            />
+                        </a>
+                        <a href='#'>
+                            <Image
+                                src={twitter}
+                            />
+                        </a>
+                    </Grid>
+                </Grid>
+
+            </Grid>
+        </Box>
     )
 }
 

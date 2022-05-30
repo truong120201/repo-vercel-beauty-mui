@@ -1,17 +1,9 @@
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import useStyles from './styles'
-import { useEffect, useState } from 'react'
 
 
 function TitleAndDesc(props) {
-
-    // const classesVal = useStyles()
-    // const [classes, setClasses] = useState({})
-
-    // useEffect(() => {
-    //     setClasses(classesVal)
-    // })
 
     const classes = useStyles()
 

@@ -1,8 +1,5 @@
 import { Layout } from '../../components/index.js'
 
-// import css module file
-import style from './Home1.module.css'
-
 // import components from components
 import { Header, TitleAndDesc, Contact, ProfessionalExpert } from '../../components/index.js'
 
@@ -10,12 +7,14 @@ import { Header, TitleAndDesc, Contact, ProfessionalExpert } from '../../compone
 import { AboutUs, ListService, Slider } from '../../views/Home1/index.js'
 
 // MUI
-import Grid from '@material-ui/core/Grid'
+import useStyles from './styles.js'
+import { Box } from '@material-ui/core'
 
 function Home1() {
+    const classes = useStyles()
     return (
         <Layout>
-            <div id='top' className={`${style.home1}`}>
+            <Box className={classes.home1}>
                 <Header logo1={true} color1={false} />
                 <Slider />
                 <TitleAndDesc
@@ -28,7 +27,7 @@ function Home1() {
                 <AboutUs />
                 <ProfessionalExpert />
                 <Contact flexRow={false} />
-            </div>
+            </Box>
         </Layout>
     )
 }

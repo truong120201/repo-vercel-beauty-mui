@@ -2,12 +2,15 @@ import styles from '../styles/Home.module.css'
 import { Layout } from '../components/index'
 import Home1 from './Home1/Home1'
 
-export default function Home() {
+import React from 'react';
+
+export default function Index() {
+
   return (
     <div className={styles.container}>
-      <Layout>
+      {/* <Layout> */}
         <Home1 />
-      </Layout>
+      {/* </Layout> */}
     </div>
-  )
+  );
 }

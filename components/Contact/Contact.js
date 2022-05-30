@@ -1,65 +1,86 @@
-import style from './Contact.module.css'
 import Image from 'next/image'
 
 import contactImg from '../../assets/images/contact-image.svg'
 
+// MUI
+import useStyles from './styles'
+import { Grid, Box, FormControl, TextField, Input } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
+
+
 function Contact(props) {
+
+    const classes = useStyles()
+
     return (
-        <div className={style.contact}>
-            <div className={`${style.contactTop} ${props.flexRow == true ? style.flexRow : ''}`}>
-                <div className={style.contactTopEle}>
-                    <p className={style.contactTitleTop}>Contact Us</p>
-                    <p className={style.contactTitleBot}>Send your inquiry to our expert team</p>
-                </div>
-                <p className={style.contactTopDesc}>
+        <Grid container direction='column' alignItems='flex-end' className={classes.contact}>
+            <Grid container direction='column' className={`${classes.contactTop} ${props.flexRow == true ? classes.flexRow : ''}`}>
+                <Box>
+                    <Typography component='p' className={`${classes.contactTitleTop}`}>Contact Us</Typography>
+                    <Typography component='p' className={classes.contactTitleBot}>Send your inquiry to our expert team</Typography>
+                </Box>
+                <Typography className={classes.contactTopDesc}>
                     Lorem ipsum dolor sit amet nulla turapis tellus.
-                </p>
-            </div>
-            <div className={style.contactBot}>
-                <div className={style.contactImage}>
+                </Typography>
+            </Grid>
+            <Grid container justifyContent='space-between' className={classes.contactBot}>
+                <Box className={classes.contactImage}>
                     <Image
                         src={contactImg}
                     />
-                </div>
-                <form id='myform' className={style.formContact}>
-                    <div className={style.contactRow}>
-                        <input
+                </Box>
+                <FormControl component='form' id='myform' className={classes.formContact}>
+                    <Grid container justifyContent='space-between'>
+                        <TextField
                             type='text'
                             placeholder='First name'
-                            className={style.formInputShort}
+                            className={classes.formInputShort}
+                            InputProps={{
+                                disableUnderline: true
+                            }}
                         />
-                        <input
+                        <TextField
                             type='text'
                             placeholder='Last name'
-                            className={style.formInputShort}
+                            className={classes.formInputShort}
+                            InputProps={{
+                                disableUnderline: true
+                            }}
                         />
-                    </div>
-                    <input
+                    </Grid>
+                    <TextField
                         type='text'
                         placeholder='Email address'
-                        className={style.formInputLong}
+                        className={classes.formInputLong}
+                        InputProps={{
+                            disableUnderline: true
+                        }}
                     />
-                    <input
+                    <TextField
                         type='text'
                         placeholder='Subject message'
-                        className={style.formInputLong}
+                        className={classes.formInputLong}
+                        InputProps={{
+                            disableUnderline: true
+                        }}
                     />
                     <textarea
                         placeholder='Your inquiry here'
                         rows="40"
-                        className={style.formTextarea}
+                        className={classes.formTextarea}
                     ></textarea>
-                </form>
-            </div>
-            <div className={style.submitBtnWrapper}>
-                <input
-                    className={style.submitContactFormButton}
+                </FormControl>
+            </Grid>
+            <Box className={classes.submitBtnWrapper}>
+                <Input
+                    className={classes.submitContactFormButton}
                     type="submit"
                     form="myform"
                     value="Send Message"
+                    disableUnderline
                 />
-            </div>
-        </div>
+            </Box>
+        </Grid>
     )
 }
 

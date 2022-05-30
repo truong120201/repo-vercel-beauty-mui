@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link'
-import style from './Header.module.css'
 import Image from 'next/image'
 
 import { useState } from 'react';
@@ -19,8 +18,8 @@ function Header(props) {
     const classes = useStyles()
     const [showMenu, setShowMenu] = useState(false)
     return (
-        <Grid container alignItems='center' justifyContent='center'>
-            <Grid item container alignItems='center' justifyContent='space-between' wrap='nowrap' lg={10} md={11} xs={12} sm={12}>
+        <Grid container alignItems='center' justifyContent='center' className={classes.header}>
+            <Grid item container alignItems='center' justifyContent='space-between' wrap='nowrap'>
                 <Grid item>
                     <Link href='/Home1'>
                         <a>
@@ -43,15 +42,15 @@ function Header(props) {
                     </Link>
                 </Grid>
                 <Grid container justifyContent='flex-end'>
-                    <Grid item className={`${style.headerNavLink} ${showMenu == true ? style.show : style.hide}`}>
-                        <Link href='/Home2'><a className={`${style.headerNav} ${props.color1 == true ? style.color1Home : style.headerNavHome}`}>Home +</a></Link>
-                        <Link href='/About'><a className={`${style.headerNav} ${style.headerNavAbout} ${props.color1 == true ? style.color1 : ''}`}>About</a></Link>
-                        <Link href='/Service'><a className={`${style.headerNav} ${style.headerNavService} ${props.color1 == true ? style.color1 : ''}`}>Service</a></Link>
-                        <Link href='/Gallery'><a className={`${style.headerNav} ${style.headerNavGallery} ${props.color1 == true ? style.color1 : ''}`}>Gallery</a></Link>
-                        <Link href='/Blog'><a className={`${style.headerNav} ${style.headerNavBlog} ${props.color1 == true ? style.color1 : ''}`}>Blog</a></Link>
-                        <Link href='/ContactPage'><a className={`${style.headerNav} ${style.headerNavContact} ${props.color1 == true ? style.color1 : ''}`}>Contact</a></Link>
+                    <Grid item className={`${classes.headerNavLink} ${showMenu == true ? classes.show : classes.hide}`}>
+                        <Link href='/Home2'><a className={`${classes.headerNav} ${props.color1 == true ? classes.color1Home : classes.headerNavHome}`}>Home +</a></Link>
+                        <Link href='/About'><a className={`${classes.headerNav} ${classes.headerNavAbout} ${props.color1 == true ? classes.color1 : ''}`}>About</a></Link>
+                        <Link href='/Service'><a className={`${classes.headerNav} ${classes.headerNavService} ${props.color1 == true ? classes.color1 : ''}`}>Service</a></Link>
+                        <Link href='/Gallery'><a className={`${classes.headerNav} ${classes.headerNavGallery} ${props.color1 == true ? classes.color1 : ''}`}>Gallery</a></Link>
+                        <Link href='/Blog'><a className={`${classes.headerNav} ${classes.headerNavBlog} ${props.color1 == true ? classes.color1 : ''}`}>Blog</a></Link>
+                        <Link href='/ContactPage'><a className={`${classes.headerNav} ${classes.headerNavContact} ${props.color1 == true ? classes.color1 : ''}`}>Contact</a></Link>
                     </Grid>
-                    <Grid item className={style.phoneBars}>
+                    <Grid item className={classes.phoneBars}>
                         <Image
                             src={phoneBars}
                             onClick={() => setShowMenu(prev => !prev)}

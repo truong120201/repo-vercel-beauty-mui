@@ -1,4 +1,4 @@
-import style from './Footer.module.css'
+// import style from './Footer.module.css'
 import Image from 'next/image'
 
 import logoWhite from '../../assets/images/logo-white.svg'
@@ -9,139 +9,132 @@ import twitterf from '../../assets/images/twitter-f.svg'
 import linkedinf from '../../assets/images/linkedin-f.svg'
 import arrow from '../../assets/images/caret-right.svg'
 
+// MUI
+import { Grid, Box, Typography } from '@material-ui/core'
+import useStyles from './styles'
+
 function Footer() {
+
+    const classes = useStyles()
+
     return (
-        <div className={style.footer}>
-            <div className={style.footerTop}>
-                <div className={style.footerTop50}>
+        <Box className={classes.footer}>
+            <Grid container className={classes.footerTop}>
+                <Box className={classes.footerTop50}>
                     <Image
-                        className={style.footerLogo}
+                        className={classes.footerLogo}
                         src={logoWhite}
                     />
-                    <p className={style.footerDesc}><span className={style.beautyText}>Beauty </span>is a Beauty Clinic WordPress Theme.</p>
-                    <p className={style.footerDesc2}>Baker Steet 101, NY, United States.</p>
-                    <p className={style.footerDesc3}>
-                        <span className={style.phoneNumber}>
+                    <Typography component='p' className={classes.footerDesc}><Typography component='span' className={classes.beautyText}>Beautice </Typography>is a Beauty Clinic WordPress Theme.</Typography>
+                    <Typography component='p' className={classes.footerDesc2}>Baker Steet 101, NY, United States.</Typography>
+                    <Typography component='p' className={classes.footerDesc3}>
+                        <Typography component='span' className={classes.phoneNumber}>
                             +521 569 8966.
-                        </span>
+                        </Typography>
                         mail@company.com.
-                    </p>
-                </div>
-                <div className={style.footerTopElement}>
-                    <p className={style.footerTopHeading}>
+                    </Typography>
+                </Box>
+                <Box className={classes.footerTopElement}>
+                    <Typography component='p' className={classes.footerTopHeading}>
                         Pages
-                    </p>
-                    <div className={style.footerCategory}>
-                        <div className={style.cateElement}>
+                    </Typography>
+                    <Box>
+                        <Box className={classes.cateElement}>
                             <Image
                                 src={arrow}
                             />
                             Home
-                        </div>
-                        <div className={style.cateElement}>
+                        </Box>
+                        <Box className={classes.cateElement}>
                             <Image
                                 src={arrow}
                             />
                             About
-                        </div>
-                        <div className={style.cateElement}>
+                        </Box>
+                        <Box className={classes.cateElement}>
                             <Image
                                 src={arrow}
                             />
                             Services
-                        </div>
-                        <div className={style.cateElement}>
+                        </Box>
+                        <Box className={classes.cateElement}>
                             <Image
                                 src={arrow}
                             />
                             Gallery
-                        </div>
-                        <div className={style.cateElement}>
+                        </Box>
+                        <Box className={classes.cateElement}>
                             <Image
                                 src={arrow}
                             />
                             Team
-                        </div>
-                    </div>
-                </div>
-                <div className={style.footerTopElement}>
-                    <p className={style.footerTopHeading}>
+                        </Box>
+                    </Box>
+                </Box>
+                <Box className={classes.footerTopElement}>
+                    <Typography component='p' className={classes.footerTopHeading}>
                         Informations
-                    </p>
-                    <div className={style.footerCategory}>
-                        <div className={style.cateElement}>
+                    </Typography>
+                    <Box className={classes.footerCategory}>
+                        <Box className={classes.cateElement}>
                             <Image
                                 src={arrow}
                             />
                             Terms & conditions
-                        </div>
-                        <div className={style.cateElement}>
+                        </Box>
+                        <Box className={classes.cateElement}>
                             <Image
                                 src={arrow}
                             />
                             Privacy policy
-                        </div>
-                        <div className={style.cateElement}>
+                        </Box>
+                        <Box className={classes.cateElement}>
                             <Image
                                 src={arrow}
                             />
                             Blog
-                        </div>
-                        <div className={style.cateElement}>
+                        </Box>
+                        <Box className={classes.cateElement}>
                             <Image
                                 src={arrow}
                             />
                             Contact
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className={style.footerBot}>
-                <div className={style.footerBotSocials}>
-                    <a href='#'>
-                        <div className={style.socialMediaIcon}>
-
-                            <Image
-                                src={facebookf}
-                            />
-                        </div>
+                        </Box>
+                    </Box>
+                </Box>
+            </Grid>
+            <Grid container alignItems='center' justifyContent='space-between' className={classes.footerBot}>
+                <Grid container className={classes.socialMediaIcons}>
+                    <a href='#' className={classes.socialMediaIcon}>
+                        <Image
+                            src={facebookf}
+                        />
                     </a>
-                    <a href='#'>
-                        <div className={style.socialMediaIcon}>
-
-                            <Image
-                                src={twitterf}
-                            />
-                        </div>
+                    <a href='#' className={classes.socialMediaIcon}>
+                        <Image
+                            src={twitterf}
+                        />
                     </a>
-                    <a href='#'>
-                        <div className={style.socialMediaIcon}>
-
-                            <Image
-                                src={linkedinf} className={style.socialMediaIcon}
-                            />
-                        </div>
+                    <a href='#' className={classes.socialMediaIcon}>
+                        <Image
+                            src={linkedinf}
+                        />
                     </a>
-                    <a href='#'>
-                        <div className={style.socialMediaIcon}>
-
-                            <Image
-                                src={youtubef}
-                            />
-                        </div>
+                    <a href='#' className={classes.socialMediaIcon}>
+                        <Image
+                            src={youtubef}
+                        />
                     </a>
-                    <a href='#'>
-                        <div className={style.socialMediaIcon}>
+                    <a href='#' className={classes.socialMediaIcon}>
 
-                            <Image
-                                src={instagramf}
-                            />
-                        </div>
+                        <Image
+                            src={instagramf}
+                        />
                     </a>
-                </div>
-                <p className={style.footerCopyright}>© AltDesain Studio 2021 - All right reserved.</p>
-            </div>
-        </div>
+                </Grid>
+                <Typography component='p' className={classes.footerCopyright}>© AltDesain Studio 2021 - All right reserved.</Typography>
+            </Grid>
+        </Box>
     )
 }
 

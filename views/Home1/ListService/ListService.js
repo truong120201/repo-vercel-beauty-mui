@@ -1,39 +1,41 @@
-import style from '../../../pages/Home1/Home1.module.css'
 import Image from 'next/image'
 
 import service1 from '../../../assets/images/service1.svg'
 import service2 from '../../../assets/images/service2.svg'
 import service3 from '../../../assets/images/service3.svg'
+import { Grid } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
+import useStyles from './styles'
 
 function ListService() {
+
+    const classes = useStyles()
+
     return (
         <>
-            <div className={style.listService}>
-                <div className={style.service}>
+            <Grid container justifyContent='space-around' className={classes.listService}>
+                <Grid item className={classes.service}>
                     <Image
-                        className={style.serviceImg}
                         src={service1}
                     />
-                    <p className={style.serviceTitle}>Beauty consultation</p>
-                    <p className={style.serviceDesc}>Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.</p>
-                </div>
-                <div className={style.service}>
+                    <Typography component='p' className={classes.serviceTitle}>Beauty consultation</Typography>
+                    <Typography component='p' className={classes.serviceDesc}>Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.</Typography>
+                </Grid>
+                <Grid item className={classes.service}>
                     <Image
-                        className={style.serviceImg}
                         src={service2}
                     />
-                    <p className={style.serviceTitle}>Skin treatments</p>
-                    <p className={style.serviceDesc}>Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.</p>
-                </div>
-                <div className={style.service}>
+                    <Typography component='p' className={classes.serviceTitle}>Skin treatments</Typography>
+                    <Typography component='p' className={classes.serviceDesc}>Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.</Typography>
+                </Grid>
+                <Grid item className={classes.service}>
                     <Image
-                        className={style.serviceImg}
                         src={service3}
                     />
-                    <p className={style.serviceTitle}>Beauty product</p>
-                    <p className={style.serviceDesc}>Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.</p>
-                </div>
-            </div>
+                    <Typography component='p' className={classes.serviceTitle}>Beauty product</Typography>
+                    <Typography component='p' className={classes.serviceDesc}>Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.</Typography>
+                </Grid>
+            </Grid>
         </>
     )
 }
