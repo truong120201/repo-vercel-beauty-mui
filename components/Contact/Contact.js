@@ -6,6 +6,7 @@ import contactImg from '../../assets/images/contact-image.svg'
 import useStyles from './styles'
 import { Grid, Box, FormControl, TextField, Input } from '@material-ui/core'
 import Typography from '@material-ui/core/Typography'
+import { TextareaAutosize } from '@material-ui/core'
 
 
 function Contact(props) {
@@ -14,9 +15,9 @@ function Contact(props) {
 
     return (
         <Grid container direction='column' alignItems='flex-end' className={classes.contact}>
-            <Grid container direction='column' className={classes.contactTop}>
+            <Grid container direction='column' className={`${classes.contactTop} ${props.flexRow == true ? classes.flexRow : ''}`}>
                 <Box>
-                    <Typography component='p' className={classes.contactTitleTop}>Contact Us</Typography>
+                    <Typography component='p' className={`${classes.contactTitleTop}`}>Contact Us</Typography>
                     <Typography component='p' className={classes.contactTitleBot}>Send your inquiry to our expert team</Typography>
                 </Box>
                 <Typography className={classes.contactTopDesc}>
@@ -64,11 +65,12 @@ function Contact(props) {
                             disableUnderline: true
                         }}
                     />
-                    <textarea
+                    <TextareaAutosize
                         placeholder='Your inquiry here'
-                        rows="40"
+                        maxRows="40"
+                        minRows="40"
                         className={classes.formTextarea}
-                    ></textarea>
+                    ></TextareaAutosize>
                 </FormControl>
             </Grid>
             <Box className={classes.submitBtnWrapper}>

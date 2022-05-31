@@ -3,23 +3,28 @@ import Image from 'next/image'
 
 import playButton from '../../../assets/images/playbutton-home2.png'
 
+// MUI
+import { Typography, Box, Grid } from '@material-ui/core'
+import useStyles from './styles'
+
 function Slider() {
+    const classes = useStyles()
     return (
         <>
-            <div className={style.slider}>
-                <div className={style.sliderLeft}>
-                    <p className={style.sliderTitle}>Your beauty center place</p>
-                    <p className={style.sliderDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo, massa pellentesque arcu fusce et magna consequat neque vitae lobortis.</p>
-                    <a href='' className={style.moreDetailBtn}>More Details</a>
-                </div>
-                <div className={style.sliderRight}>
+            <Grid container justifyContent='space-between' className={classes.slider}>
+                <Box className={classes.sliderLeft}>
+                    <Typography component='p' className={classes.sliderTitle}>Your beauty center place</Typography>
+                    <Typography component='p' className={classes.sliderDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo, massa pellentesque arcu fusce et magna consequat neque vitae lobortis.</Typography>
+                    <a href='' className={classes.moreDetailBtn}>More Details</a>
+                </Box>
+                <Grid container alignItems='center' justifyContent='center' className={classes.sliderRight}>
                     <Image
                         src={playButton}
-                        className={style.playButtonImg}
+                        className={classes.playButtonImg}
                     />
-                    <p className={style.playButtonText}>Tour Video</p>
-                </div>
-            </div>
+                    <Typography component='p' className={classes.playButtonText}>Tour Video</Typography>
+                </Grid>
+            </Grid>
         </>
     )
 }

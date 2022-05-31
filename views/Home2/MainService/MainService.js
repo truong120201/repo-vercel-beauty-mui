@@ -7,58 +7,61 @@ import service2 from '../../../assets/images/icon-service-2-home2.svg'
 import service3 from '../../../assets/images/icon-service-3-home2.svg'
 import arrDouble from '../../../assets/images/angle-double-right.svg'
 
+// MUI
+import { Grid, Box, Typography } from '@material-ui/core'
+import useStyles from './styles'
+
 function MainService() {
+
+    const classes = useStyles()
+
     return (
-        <>
-            <div className={style.services}>
-                <div className={style.servicesTitle}>
-                    <TitleAndDesc
-                        left={false}
-                        title1={'Main Services'}
-                        title2={'Our focus services'}
-                        desc={'Lorem ipsum dolor sit amet.'}
+        <Box className={classes.services}>
+            <TitleAndDesc
+                left={false}
+                title1={'Main Services'}
+                title2={'Our focus services'}
+                desc={'Lorem ipsum dolor sit amet.'}
+            />
+            <Grid container justifyContent='space-around' className={classes.listServices}>
+                <Box className={classes.service}>
+                    <Image
+                        src={service1}
+                        className={classes.serviceIcon}
                     />
-                </div>
-                <div className={style.listServices}>
-                    <div className={style.service}>
-                        <Image
-                            src={service1}
-                            className={style.serviceIcon}
-                        />
-                        <p className={style.serviceHeading}>Beauty consultation</p>
-                        <p className={style.serviceDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-                        <a href='#' className={style.serviceLearnMore}>
-                            <p className={style.learnMoreText}>Learn more</p>
-                            <Image src={arrDouble} />
-                        </a>
-                    </div>
-                    <div className={style.service}>
-                        <Image
-                            src={service2}
-                            className={style.serviceIcon}
-                        />
-                        <p className={style.serviceHeading}>Skin treatments</p>
-                        <p className={style.serviceDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-                        <a href='#' className={style.serviceLearnMore}>
-                            <p className={style.learnMoreText}>Learn more</p>
-                            <Image src={arrDouble} />
-                        </a>
-                    </div>
-                    <div className={style.service}>
-                        <Image
-                            src={service3}
-                            className={style.serviceIcon}
-                        />
-                        <p className={style.serviceHeading}>Beauty product</p>
-                        <p className={style.serviceDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-                        <a href='#' className={style.serviceLearnMore}>
-                            <p className={style.learnMoreText}>Learn more</p>
-                            <Image src={arrDouble} />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </>
+                    <Typography component='p' className={classes.serviceHeading}>Beauty consultation</Typography>
+                    <Typography component='p' className={classes.serviceDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing.</Typography>
+                    <a href='#' className={classes.serviceLearnMore}>
+                        <Typography component='p' className={classes.learnMoreText}>Learn more</Typography>
+                        <Image src={arrDouble} />
+                    </a>
+                </Box>
+                <Box className={classes.service}>
+                    <Image
+                        src={service2}
+                        className={classes.serviceIcon}
+                    />
+                    <Typography component='p' className={classes.serviceHeading}>Skin treatments</Typography>
+                    <Typography component='p' className={classes.serviceDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing.</Typography>
+                    <a href='#' className={classes.serviceLearnMore}>
+                        <Typography component='p' className={classes.learnMoreText}>Learn more</Typography>
+                        <Image src={arrDouble} />
+                    </a>
+                </Box>
+                <Box className={classes.service}>
+                    <Image
+                        src={service3}
+                        className={classes.serviceIcon}
+                    />
+                    <Typography component='p' className={classes.serviceHeading}>Beauty product</Typography>
+                    <Typography component='p' className={classes.serviceDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing.</Typography>
+                    <a href='#' className={classes.serviceLearnMore}>
+                        <Typography component='p' className={classes.learnMoreText}>Learn more</Typography>
+                        <Image src={arrDouble} />
+                    </a>
+                </Box>
+            </Grid>
+        </Box>
     )
 }
 

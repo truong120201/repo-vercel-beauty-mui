@@ -1,16 +1,18 @@
-import style from '../../../pages/About/About.module.css'
+import { Box, Typography } from '@material-ui/core'
+import useStyles from './styles'
 
 function Slogan() {
+
+    const classes = useStyles()
+
     return (
-        <>
-            <div className={style.slogan}>
-                <div className={style.sloganDesc}>
-                    <p className={style.sloganTitleTop}>Business Slogan</p>
-                    <p className={style.sloganTitleBot}>Best responsibility and service for our customers</p>
-                    <p className={style.sloganAbout}>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
-                </div>
-            </div>
-        </>
+            <Box className={classes.slogan}>
+                <Box>
+                    <Typography component='p' className={classes.sloganTitleTop}>Business Slogan</Typography>
+                    <Typography component='p' className={classes.sloganTitleBot}>Best responsibility and service for our customers</Typography>
+                    <Typography component='p' className={classes.sloganAbout}>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</Typography>
+                </Box>
+            </Box>
     )
 }
 

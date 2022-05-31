@@ -7,7 +7,7 @@
 html,
 body {
   font-family: 'Poppins', sans-serif !important;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 ::placeholder {

@@ -1,4 +1,4 @@
-import style from '../../../pages/Home2/Home2.module.css'
+// import style from '../../../pages/Home2/Home2.module.css'
 import Image from 'next/image'
 
 import handShake from '../../../assets/images/handshake 1.svg'
@@ -6,58 +6,63 @@ import brotherhood from '../../../assets/images/brotherhood 1.svg'
 import earth from '../../../assets/images/earth 1.svg'
 import doctor from '../../../assets/images/doctor 1.svg'
 
+// MUI
+import { Grid, Typography, Box } from '@material-ui/core'
+import useStyles from './styles'
+
 function Choosing() {
+
+    const classes = useStyles()
+
     return (
-        <>
-            <div className={style.choosing}>
-                <div className={style.choosingTitle}>
-                    <p className={style.choosingHeading}>Why choosing us?</p>
-                    <p className={style.choosinDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
-                </div>
-                <div className={style.choosingData}>
-                    <div className={style.choosingDataChild}>
+            <Grid container justifyContent='space-between' alignItems='center' className={classes.choosing}>
+                <Box className={classes.choosingTitle}>
+                    <Typography component='p' className={classes.choosingHeading}>Why choosing us?</Typography>
+                    <Typography component='p' className={classes.choosinDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</Typography>
+                </Box>
+                <Grid container className={classes.choosingData}>
+                    <Grid container alignItems='center' className={classes.choosingDataChild}>
                         <Image
                             src={handShake}
-                            className={style.choosingIcon}
+                            // className={classes.choosingIcon}
                         />
-                        <div className={style.choosingDataRigth}>
-                            <p className={style.choosingCount}>100%</p>
-                            <p className={style.choosingCountDesc}>trusted clinic</p>
-                        </div>
-                    </div>
-                    <div className={style.choosingDataChild}>
+                        <Box className={classes.choosingDataRigth}>
+                            <Typography component='p' className={classes.choosingCount}>100%</Typography>
+                            <Typography component='p' className={classes.choosingCountDesc}>trusted clinic</Typography>
+                        </Box>
+                    </Grid>
+                    <Grid container alignItems='center' className={classes.choosingDataChild}>
                         <Image
                             src={brotherhood}
-                            className={style.choosingIcon}
+                            // className={classes.choosingIcon}
                         />
-                        <div className={style.choosingDataRigth}>
-                            <p className={style.choosingCount}>99%</p>
-                            <p className={style.choosingCountDesc}>customer love</p>
-                        </div>
-                    </div>
-                    <div className={style.choosingDataChild}>
+                        <Box className={classes.choosingDataRigth}>
+                            <Typography component='p' className={classes.choosingCount}>99%</Typography>
+                            <Typography component='p' className={classes.choosingCountDesc}>customer love</Typography>
+                        </Box>
+                    </Grid>
+                    <Grid container alignItems='center' className={classes.choosingDataChild}>
                         <Image
                             src={earth}
-                            className={style.choosingIcon}
+                            // className={classes.choosingIcon}
                         />
-                        <div className={style.choosingDataRigth}>
-                            <p className={style.choosingCount}>75+</p>
-                            <p className={style.choosingCountDesc}>asia branch</p>
-                        </div>
-                    </div>
-                    <div className={style.choosingDataChild}>
+                        <Box className={classes.choosingDataRigth}>
+                            <Typography component='p' className={classes.choosingCount}>75+</Typography>
+                            <Typography component='p' className={classes.choosingCountDesc}>asia branch</Typography>
+                        </Box>
+                    </Grid>
+                    <Grid container alignItems='center' className={classes.choosingDataChild}>
                         <Image
                             src={doctor}
-                            className={style.choosingIcon}
+                            // className={classes.choosingIcon}
                         />
-                        <div className={style.choosingDataRigth}>
-                            <p className={style.choosingCount}>1.200+</p>
-                            <p className={style.choosingCountDesc}>license worker</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
+                        <Box className={classes.choosingDataRigth}>
+                            <Typography component='p' className={classes.choosingCount}>1.200+</Typography>
+                            <Typography component='p' className={classes.choosingCountDesc}>license worker</Typography>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Grid>
     )
 }
 

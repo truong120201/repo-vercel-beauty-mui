@@ -9,50 +9,54 @@ import client3 from '../../../assets/images/LOGO3.svg'
 import client4 from '../../../assets/images/LOGO4.svg'
 import client5 from '../../../assets/images/LOGO5.svg'
 
+import { Box, Grid } from '@material-ui/core'
+import useStyles from './styles'
+
 function Client() {
+
+    const classes = useStyles()
+
     return (
-        <>
-            <div className={style.clients}>
+            <Box className={classes.clients}>
                 <TitleAndDesc
                     left={false}
                     title1={'Our Clients'}
                     title2={'Well-known agencies'}
                     desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'}
                 />
-                <div className={style.clientList}>
-                    <div className={style.client}>
+                <Grid container justifyContent='space-around' className={classes.clientList}>
+                    <Box className={classes.clientImg}>
                         <Image
                             src={client1}
-                            className={style.clientImg}
+                            layout='responsive'
                         />
-                    </div>
-                    <div className={style.client}>
+                    </Box>
+                    <Box className={classes.clientImg}>
                         <Image
                             src={client2}
-                            className={style.clientImg}
+                            layout='responsive'
                         />
-                    </div>
-                    <div className={style.client}>
+                    </Box>
+                    <Box className={classes.clientImg}>
                         <Image
                             src={client3}
-                            className={style.clientImg}
+                            layout='responsive'
                         />
-                    </div>
-                    <div className={style.client}>
+                    </Box>
+                    <Box className={classes.clientImg}>
                         <Image
                             src={client4}
-                            className={style.clientImg}
+                            layout='responsive'
                         />
-                    </div>
-                    <div className={style.client}>
+                    </Box>
+                    <Box className={classes.clientImg}>
                         <Image
                             src={client5}
-                            className={style.clientImg}
+                            layout='responsive'
                         />
-                    </div>
-                </div>
-            </div>
-        </>
+                    </Box>
+                </Grid>
+            </Box>
     )
 }
 

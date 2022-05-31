@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles({
     contact: {
-        padding: '0 150px !important',
+        padding: '0 150px',
         marginTop: '144px',
         '@media (max-width: 929px)': {
             padding: '0 20px'
@@ -63,6 +63,18 @@ const useStyles = makeStyles({
         marginTop: '44px',
         '@media (max-width: 929px)': {
             width: '100%'
+        },
+        '@media (min-width: 930px) and (max-width:1420px)': {
+            width: '45%'
+        }
+    },
+
+    contactImage: {
+        '@media (max-width: 929px)': {
+            display: 'none'
+        },
+        '@media (min-width: 930px) and (max-width:1420px)': {
+            width: '45%'
         }
     },
     contactRow: {
