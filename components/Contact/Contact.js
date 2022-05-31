@@ -14,9 +14,9 @@ function Contact(props) {
 
     return (
         <Grid container direction='column' alignItems='flex-end' className={classes.contact}>
-            <Grid container direction='column' className={`${classes.contactTop} ${props.flexRow == true ? classes.flexRow : ''}`}>
+            <Grid container direction='column' className={classes.contactTop}>
                 <Box>
-                    <Typography component='p' className={`${classes.contactTitleTop}`}>Contact Us</Typography>
+                    <Typography component='p' className={classes.contactTitleTop}>Contact Us</Typography>
                     <Typography component='p' className={classes.contactTitleBot}>Send your inquiry to our expert team</Typography>
                 </Box>
                 <Typography className={classes.contactTopDesc}>
