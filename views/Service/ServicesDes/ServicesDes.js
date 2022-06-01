@@ -1,4 +1,3 @@
-import style from '../../../pages/Service/Service.module.css'
 import Image from 'next/image'
 
 import { TitleAndDesc } from '../../../components/index.js'
@@ -8,75 +7,82 @@ import serviceDesc2 from '../../../assets/images/service-desc-img-2.svg'
 import serviceDesc3 from '../../../assets/images/service-desc-img-3.svg'
 import arrDouble from '../../../assets/images/angle-double-right.svg'
 
+// MUI
+import useStyles from './styles'
+import { Grid, Box, Typography } from '@material-ui/core'
+
 function ServiesDes() {
+
+    const classes = useStyles()
+
     return (
         <>
-            <div className={style.serviceDes}>
-                <div className={style.serviceDesImg}>
+            <Grid container justifyContent='space-between' alignItems='center' className={classes.serviceDes}>
+                <Box className={classes.serviceDesImg}>
                     <Image
                         layout='responsive'
                         src={serviceDesc1}
                     />
-                </div>
-                <div className={style.serviceTitleAndDesc}>
+                </Box>
+                <Box className={classes.serviceTitleAndDesc}>
                     <TitleAndDesc
                         left={true}
                         title1={'Beauty Consultation'}
                         title2={'We services beauty consultation'}
                         desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet. Egestas volutpat facilisi eu libero.'}
                     />
-                    <div className={style.serviceDesFooter}>
-                        <p className={style.serviceDesFooterText}>Make an Appointment</p>
-                        <div className={style.dbArrr}>
+                    <Grid container alignItems='center' className={classes.serviceDesFooter}>
+                        <Typography component='p' className={classes.serviceDesFooterText}>Make an Appointment</Typography>
+                        <Box className={classes.dbArrr}>
                             <Image src={arrDouble} />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className={style.serviceDes}>
-                <div className={style.serviceTitleAndDesc}>
+                        </Box>
+                    </Grid>
+                </Box>
+            </Grid>
+            <Grid container justifyContent='space-between' alignItems='center' className={classes.serviceDes}>
+                <Box className={classes.serviceTitleAndDesc}>
                     <TitleAndDesc
                         left={true}
                         title1={'Skin Treatements'}
                         title2={'Skin care and treatment by expert'}
                         desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet. Egestas volutpat facilisi eu libero.'}
                     />
-                    <div className={style.serviceDesFooter}>
-                        <p className={style.serviceDesFooterText}>Make an Appointment</p>
-                        <div className={style.dbArrr}>
+                    <Grid container alignItems='center' className={classes.serviceDesFooter}>
+                        <Typography component='p' className={classes.serviceDesFooterText}>Make an Appointment</Typography>
+                        <Box className={classes.dbArrr}>
                             <Image src={arrDouble} />
-                        </div>
-                    </div>
-                </div>
-                <div className={style.serviceDesImg}>
+                        </Box>
+                    </Grid>
+                </Box>
+                <Box className={classes.serviceDesImg}>
                     <Image
                         layout='responsive'
                         src={serviceDesc2}
                     />
-                </div>
-            </div>
-            <div className={style.serviceDes}>
-                <div className={style.serviceDesImg}>
+                </Box>
+            </Grid>
+            <Grid container justifyContent='space-between' alignItems='center' className={classes.serviceDes}>
+                <Box className={classes.serviceDesImg}>
                     <Image
                         layout='responsive'
                         src={serviceDesc3}
                     />
-                </div>
-                <div className={style.serviceTitleAndDesc}>
+                </Box>
+                <Box className={classes.serviceTitleAndDesc}>
                     <TitleAndDesc
                         left={true}
                         title1={'Beauty Product'}
                         title2={'We present quality beauty products'}
                         desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet. Egestas volutpat facilisi eu libero.'}
                     />
-                    <div className={style.serviceDesFooter}>
-                        <p className={style.serviceDesFooterText}>Make an Appointment</p>
-                        <div className={style.dbArrr}>
+                    <Grid container alignItems='center' className={classes.serviceDesFooter}>
+                        <Typography component='p' className={classes.serviceDesFooterText}>Make an Appointment</Typography>
+                        <Box className={classes.dbArrr}>
                             <Image src={arrDouble} />
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </Box>
+                    </Grid>
+                </Box>
+            </Grid>
         </>
     )
 }

@@ -1,5 +1,3 @@
-import style from '../../../pages/Blog/Blog.module.css'
-
 import Image from 'next/image'
 
 import blogLeft1 from '../../../assets/images/blog1.svg'
@@ -16,234 +14,236 @@ import instagram from '../../../assets/images/Instagram-2.svg'
 import twitter from '../../../assets/images/Twitter-2.svg'
 import linkedin from '../../../assets/images/Linkedin.svg'
 
+// MUI
+import { Grid, Box, Typography } from '@material-ui/core'
+import useStyles from './styles'
+
 function BlogMainContainer() {
+
+    const classes = useStyles()
+
     return (
-        <>
-            <div className={style.blogMainContainer}>
-                <div className={style.mainContainerLeft}>
-                    <div className={style.blogLeftElement}>
-                        <div className={style.blogLeftImg}>
-                            <Image
-                                src={blogLeft1}
-                                layout='responsive'
-                            />
-                        </div>
-                        <div className={style.blogLeftElementDesc}>
-                            <div className={style.blogLeftElementHeading}>
-                                <div className={style.folderIcon}>
-                                    <Image
-                                        src={folder}
-                                        layout='responsive'
-                                    />
-                                </div>
-                                <p className={style.blogLeftElementHeadingText}>Consultation</p>
-                            </div>
-                            <p className={style.blogLeftElementHeadingBot}>
-                                How much does a consultation cost at our clinic?
-                            </p>
-                            <p className={style.blogLeftElementAbout}>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…</p>
-                            <div className={style.blogLeftBtn}>
-                                <p className={style.btnText}>Read More</p>
-                                <div className={style.caretRightIcon}>
-                                    <Image
-                                        src={caretRight}
-                                        layout='responsive'
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.blogLeftElement}>
-                        <div className={style.blogLeftImg}>
-                            <Image
-                                src={blogLeft2}
-                                layout='responsive'
-                            />
-                        </div>
-                        <div className={style.blogLeftElementDesc}>
-                            <div className={style.blogLeftElementHeading}>
-                                <div className={style.folderIcon}>
-                                    <Image
-                                        src={folder}
-                                        layout='responsive'
-                                    />
-                                </div>
-                                <p className={style.blogLeftElementHeadingText}>Beauty</p>
-                            </div>
-                            <p className={style.blogLeftElementHeadingBot}>
-                                Watch out! don't choose the wrong beauty product
-                            </p>
-                            <p className={style.blogLeftElementAbout}>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…</p>
-                            <div className={style.blogLeftBtn}>
-                                <p className={style.btnText}>Read More</p>
-                                <div className={style.caretRightIcon}>
-                                    <Image
-                                        src={caretRight}
-                                        layout='responsive'
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.blogLeftElement}>
-                        <div className={style.blogLeftImg}>
-                            <Image
-                                src={blogLeft3}
-                                layout='responsive'
-                            />
-                        </div>
-                        <div className={style.blogLeftElementDesc}>
-                            <div className={style.blogLeftElementHeading}>
-                                <div className={style.folderIcon}>
-
-                                    <Image
-                                        src={folder}
-                                        layout='responsive'
-                                    />
-                                </div>
-                                <p className={style.blogLeftElementHeadingText}>Treatments</p>
-                            </div>
-                            <p className={style.blogLeftElementHeadingBot}>
-                                About skin care you need to know
-                            </p>
-                            <p className={style.blogLeftElementAbout}>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…</p>
-                            <div className={style.blogLeftBtn}>
-                                <p className={style.btnText}>Read More</p>
-                                <div className={style.caretRightIcon}>
-                                    <Image
-                                        src={caretRight}
-                                        layout='responsive'
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className={style.mainContainerRight}>
-                    <div className={`${style.blogRightElement} ${style.searchBox}`}>
-                        <input
-                            type='text'
-                            placeholder='Search here ...'
-                            className={style.inputSearchBlogRight}
+        <Grid container justifyContent='space-between' className={classes.blogMainContainer}>
+            <Box className={classes.mainContainerLeft}>
+                <Grid container direction='column' className={classes.blogLeftElement}>
+                    <Box className={classes.blogLeftImg}>
+                        <Image
+                            src={blogLeft1}
+                            layout='responsive'
                         />
-                        <div className={style.searchBtn}>
-                            <div className={style.searchIconImg}>
+                    </Box>
+                    <Box className={classes.blogLeftElementDesc}>
+                        <Grid container alignItems='center' className={classes.blogLeftElementHeading}>
+                            <Box className={classes.folderIcon}>
                                 <Image
-                                    src={searchIcon}
+                                    src={folder}
                                     layout='responsive'
                                 />
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${style.blogRightElement} ${style.blogRightBot}`}>
-                        <p className={style.blogRightEleHeading}>Recent Posts</p>
-                        <div className={style.blogRightBotElement}>
-                            <div className={style.blogRightImg}>
+                            </Box>
+                            <Typography component='p' className={classes.blogLeftElementHeadingText}>Consultation</Typography>
+                        </Grid>
+                        <Typography component='p' className={classes.blogLeftElementHeadingBot}>
+                            How much does a consultation cost at our clinic?
+                        </Typography>
+                        <Typography component='p' className={classes.blogLeftElementAbout}>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…</Typography>
+                        <Grid container className={classes.blogLeftBtn}>
+                            <Typography component='p' className={classes.btnText}>Read More</Typography>
+                            <Box className={classes.caretRightIcon}>
                                 <Image
-                                    src={blogRight1}
+                                    src={caretRight}
+                                />
+                            </Box>
+                        </Grid>
+                    </Box>
+                </Grid>
+                <Grid container direction='column' className={classes.blogLeftElement}>
+                    <Box className={classes.blogLeftImg}>
+                        <Image
+                            src={blogLeft2}
+                            layout='responsive'
+                        />
+                    </Box>
+                    <Box className={classes.blogLeftElementDesc}>
+                        <Grid container alignItems='center' className={classes.blogLeftElementHeading}>
+                            <Box className={classes.folderIcon}>
+                                <Image
+                                    src={folder}
                                     layout='responsive'
                                 />
-                            </div>
-                            <div className={style.blogRightSubDiv}>
-                                <p className={style.blogRightSubDivHeading}>
-                                    01 jan 2021
-                                </p>
-                                <p className={style.blogRightSubDivDesc}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                </p>
-                            </div>
-                        </div>
-                        <div className={style.blogRightBotElement}>
-                            <div className={style.blogRightImg}>
+                            </Box>
+                            <Typography component='p' className={classes.blogLeftElementHeadingText}>Beauty</Typography>
+                        </Grid>
+                        <Typography component='p' className={classes.blogLeftElementHeadingBot}>
+                            Watch out! don't choose the wrong beauty product
+                        </Typography>
+                        <Typography component='p' className={classes.blogLeftElementAbout}>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…</Typography>
+                        <Grid container className={classes.blogLeftBtn}>
+                            <Typography component='p' className={classes.btnText}>Read More</Typography>
+                            <Box className={classes.caretRightIcon}>
                                 <Image
-                                    src={blogRight2}
-                                    layout='responsive'
+                                    src={caretRight}
                                 />
-                            </div>
-                            <div className={style.blogRightSubDiv}>
-                                <p className={style.blogRightSubDivHeading}>
-                                    01 jan 2021
-                                </p>
-                                <p className={style.blogRightSubDivDesc}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                </p>
-                            </div>
-                        </div>
-                        <div className={style.blogRightBotElement}>
-                            <div className={style.blogRightImg}>
-                                <Image
-                                    src={blogRight3}
-                                    layout='responsive'
-                                />
-                            </div>
-                            <div className={style.blogRightSubDiv}>
-                                <p className={style.blogRightSubDivHeading}>
-                                    01 jan 2021
-                                </p>
-                                <p className={style.blogRightSubDivDesc}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${style.blogRightElement} ${style.blogRightBot}`}>
-                        <p className={style.blogRightEleHeading}>Categories</p>
-                        <p className={style.categoryElement}>
-                            Consultation
-                        </p>
-                        <p className={style.categoryElement}>
-                            Beauty
-                        </p>
-                        <p className={style.categoryElement}>
-                            Treatments
-                        </p>
-                        <p className={style.categoryElement}>
-                            News
-                        </p>
+                            </Box>
+                        </Grid>
+                    </Box>
+                </Grid>
+                <Grid container direction='column' className={classes.blogLeftElement}>
+                    <Box className={classes.blogLeftImg}>
+                        <Image
+                            src={blogLeft3}
+                            layout='responsive'
+                        />
+                    </Box>
+                    <Box className={classes.blogLeftElementDesc}>
+                        <Grid container alignItems='center' className={classes.blogLeftElementHeading}>
+                            <Box className={classes.folderIcon}>
 
-                    </div>
-                    <div className={`${style.blogRightElement} ${style.blogRightBot}`}>
-                        <p className={style.blogRightEleHeading}>Cloud Tags</p>
-                        <div className={style.tags}>
-                            <p className={style.tag}>beauty</p>
-                            <p className={style.tag}>cute</p>
-                            <p className={style.tag}>skin</p>
-                            <p className={style.tag}>glow</p>
-                            <p className={style.tag}>style</p>
-                            <p className={style.tag}>clinic</p>
-                            <p className={style.tag}>style</p>
-                            <p className={style.tag}>great</p>
-                            <p className={style.tag}>cute</p>
-                        </div>
-                    </div>
-                    <div className={`${style.blogRightElement} ${style.blogRightBot}`}>
-                        <p className={style.blogRightEleHeading}>Cloud Tags</p>
-                        <div className={style.socialMedias}>
-                            <div className={style.socialMediaIcon}>
                                 <Image
-                                    src={facebook}
+                                    src={folder}
+                                    layout='responsive'
                                 />
-                            </div>
-                            <div className={style.socialMediaIcon}>
+                            </Box>
+                            <Typography component='p' className={classes.blogLeftElementHeadingText}>Treatments</Typography>
+                        </Grid>
+                        <Typography component='p' className={classes.blogLeftElementHeadingBot}>
+                            About skin care you need to know
+                        </Typography>
+                        <Typography component='p' className={classes.blogLeftElementAbout}>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…</Typography>
+                        <Grid container className={classes.blogLeftBtn}>
+                            <Typography component='p' className={classes.btnText}>Read More</Typography>
+                            <Box className={classes.caretRightIcon}>
                                 <Image
-                                    src={twitter}
+                                    src={caretRight}
                                 />
-                            </div>
-                            <div className={style.socialMediaIcon}>
-                                <Image
-                                    src={instagram}
-                                />
-                            </div>
-                            <div className={style.socialMediaIcon}>
-                                <Image
-                                    src={linkedin}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
+                            </Box>
+                        </Grid>
+                    </Box>
+                </Grid>
+            </Box>
+            <Box className={classes.mainContainerRight}>
+                <Box className={`${classes.blogRightElement} ${classes.searchBox}`}>
+                    <input
+                        type='text'
+                        placeholder='Search here ...'
+                        className={classes.inputSearchBlogRight}
+                    />
+                    <Box className={classes.searchBtn}>
+                        <Box className={classes.searchIconImg}>
+                            <Image
+                                src={searchIcon}
+                                layout='responsive'
+                            />
+                        </Box>
+                    </Box>
+                </Box>
+                <Box className={`${classes.blogRightElement} ${classes.blogRightBot}`}>
+                    <Typography component='p' className={classes.blogRightEleHeading}>Recent Posts</Typography>
+                    <Grid container justifyContent='space-between' alignItems='center' className={classes.blogRightBotElement}>
+                        <Box className={classes.blogRightImg}>
+                            <Image
+                                src={blogRight1}
+                                layout='responsive'
+                            />
+                        </Box>
+                        <Box className={classes.blogRightSubDiv}>
+                            <Typography component='p' className={classes.blogRightSubDivHeading}>
+                                01 jan 2021
+                            </Typography>
+                            <Typography component='p' className={classes.blogRightSubDivDesc}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing.
+                            </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid container justifyContent='space-between' alignItems='center' className={classes.blogRightBotElement}>
+                        <Box className={classes.blogRightImg}>
+                            <Image
+                                src={blogRight2}
+                                layout='responsive'
+                            />
+                        </Box>
+                        <Box className={classes.blogRightSubDiv}>
+                            <Typography component='p' className={classes.blogRightSubDivHeading}>
+                                01 jan 2021
+                            </Typography>
+                            <Typography component='p' className={classes.blogRightSubDivDesc}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing.
+                            </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid container justifyContent='space-between' alignItems='center' className={classes.blogRightBotElement}>
+                        <Box className={classes.blogRightImg}>
+                            <Image
+                                src={blogRight3}
+                                layout='responsive'
+                            />
+                        </Box>
+                        <Box className={classes.blogRightSubDiv}>
+                            <Typography component='p' className={classes.blogRightSubDivHeading}>
+                                01 jan 2021
+                            </Typography>
+                            <Typography component='p' className={classes.blogRightSubDivDesc}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing.
+                            </Typography>
+                        </Box>
+                    </Grid>
+                </Box>
+                <Box className={`${classes.blogRightElement} ${classes.blogRightBot}`}>
+                    <Typography component='p' className={classes.blogRightEleHeading}>Categories</Typography>
+                    <Typography component='p' className={classes.categoryElement}>
+                        Consultation
+                    </Typography>
+                    <Typography component='p' className={classes.categoryElement}>
+                        Beauty
+                    </Typography>
+                    <Typography component='p' className={classes.categoryElement}>
+                        Treatments
+                    </Typography>
+                    <Typography component='p' className={classes.categoryElement}>
+                        News
+                    </Typography>
+
+                </Box>
+                <Box className={`${classes.blogRightElement} ${classes.blogRightBot}`}>
+                    <Typography component='p' className={classes.blogRightEleHeading}>Cloud Tags</Typography>
+                    <Grid container justifyContent='space-between' className={classes.tags}>
+                        <Typography component='p' className={classes.tag}>beauty</Typography>
+                        <Typography component='p' className={classes.tag}>cute</Typography>
+                        <Typography component='p' className={classes.tag}>skin</Typography>
+                        <Typography component='p' className={classes.tag}>glow</Typography>
+                        <Typography component='p' className={classes.tag}>style</Typography>
+                        <Typography component='p' className={classes.tag}>clinic</Typography>
+                        <Typography component='p' className={classes.tag}>style</Typography>
+                        <Typography component='p' className={classes.tag}>great</Typography>
+                        <Typography component='p' className={classes.tag}>cute</Typography>
+                    </Grid>
+                </Box>
+                <Box className={`${classes.blogRightElement} ${classes.blogRightBot}`}>
+                    <Typography component='p' className={classes.blogRightEleHeading}>Cloud Tags</Typography>
+                    <Grid container className={classes.socialMedias}>
+                        <Box className={classes.socialMediaIcon}>
+                            <Image
+                                src={facebook}
+                            />
+                        </Box>
+                        <Box className={classes.socialMediaIcon}>
+                            <Image
+                                src={twitter}
+                            />
+                        </Box>
+                        <Box className={classes.socialMediaIcon}>
+                            <Image
+                                src={instagram}
+                            />
+                        </Box>
+                        <Box className={classes.socialMediaIcon}>
+                            <Image
+                                src={linkedin}
+                            />
+                        </Box>
+                    </Grid>
+                </Box>
+            </Box>
+        </Grid>
     )
 }
 

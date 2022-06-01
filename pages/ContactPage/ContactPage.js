@@ -1,4 +1,3 @@
-import style from './Contact.module.css'
 import map from '../../assets/images/map.svg'
 import Image from 'next/image'
 
@@ -6,19 +5,26 @@ import { Header, TitleAndDesc, Contact, Layout } from '../../components/index.js
 
 import { Handling } from '../../views/ContactPage/index.js'
 
+// MUI
+import { Box } from '@material-ui/core'
+
 function ContactPage() {
     return (
         <Layout>
-            <div className={style.contact}>
+            <div>
                 <Header logo1={true} color1={false} />
-                <div className={style.wrapperContact}>
+                <Box sx={{ marginTop: '100px' }}>
                     <Contact flexRow={true} />
-                </div>
-                <div className={style.map}>
+                </Box>
+                <Box sx={{
+                    marginTop: '103px',
+                    marginBottom: '112px',
+                    width: '100%'
+                }}>
                     <Image
                         src={map}
                     />
-                </div>
+                </Box>
                 <TitleAndDesc
                     left={false}
                     title1={'Get in Touch'}
